@@ -151,9 +151,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\ProdutoService.cs" />
+    <Compile Include="Implementation\UsuarioService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CervejariaZe.Domain.Contracts\CervejariaZe.Domain.Contracts.csproj">
+      <Project>{D99AFB48-F671-4C5B-8252-74EEB2C9051C}</Project>
+      <Name>CervejariaZe.Domain.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CervejariaZe.Domain.Entities\CervejariaZe.Domain.Entities.csproj">
+      <Project>{6BD1994C-FACE-415F-9451-E7520DC40A27}</Project>
+      <Name>CervejariaZe.Domain.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CervejariaZe.Infra.Repositories\CervejariaZe.Infra.Repositories.csproj">
+      <Project>{581CF6DC-E078-48D5-9C01-39934E9F6640}</Project>
+      <Name>CervejariaZe.Infra.Repositories</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

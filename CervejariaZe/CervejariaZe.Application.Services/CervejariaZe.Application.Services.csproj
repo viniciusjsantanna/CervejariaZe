@@ -151,9 +151,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\ProdutoAppService.cs" />
+    <Compile Include="Implementation\UsarioAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CervejariaZe.Application.Contracts\CervejariaZe.Application.Contracts.csproj">
+      <Project>{F43A059D-AD8D-4704-968F-CC43A7823480}</Project>
+      <Name>CervejariaZe.Application.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CervejariaZe.Application.Entities\CervejariaZe.Application.Entities.csproj">
+      <Project>{7F414B91-215C-49FB-A575-DC3F16D0BD51}</Project>
+      <Name>CervejariaZe.Application.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CervejariaZe.Domain.Contracts\CervejariaZe.Domain.Contracts.csproj">
+      <Project>{D99AFB48-F671-4C5B-8252-74EEB2C9051C}</Project>
+      <Name>CervejariaZe.Domain.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CervejariaZe.Domain.Entities\CervejariaZe.Domain.Entities.csproj">
+      <Project>{6BD1994C-FACE-415F-9451-E7520DC40A27}</Project>
+      <Name>CervejariaZe.Domain.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CervejariaZe.Domain.Services\CervejariaZe.Domain.Services.csproj">
+      <Project>{A7FC8501-1C44-4442-8B2F-98F5D4B2CC9C}</Project>
+      <Name>CervejariaZe.Domain.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

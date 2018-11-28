@@ -152,8 +152,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IProdutoRepository.cs" />
+    <Compile Include="Repositories\IUsuarioRepository.cs" />
+    <Compile Include="Services\IProdutoService.cs" />
+    <Compile Include="Services\IUsarioService.cs" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CervejariaZe.Domain.Entities\CervejariaZe.Domain.Entities.csproj">
+      <Project>{6BD1994C-FACE-415F-9451-E7520DC40A27}</Project>
+      <Name>CervejariaZe.Domain.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
