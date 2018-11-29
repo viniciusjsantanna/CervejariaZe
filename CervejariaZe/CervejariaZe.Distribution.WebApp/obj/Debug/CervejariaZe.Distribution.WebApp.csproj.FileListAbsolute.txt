@@ -124,3 +124,14 @@ C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distrib
 C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\obj\Debug\CervejariaZe.Distribution.WebApp.csproj.CopyComplete
 C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\obj\Debug\CervejariaZe.Distribution.WebApp.dll
 C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\obj\Debug\CervejariaZe.Distribution.WebApp.pdb
+C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\System.Web.Cors.dll
+C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\System.Web.Http.Cors.dll
+C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\System.Web.Http.Cors.xml
+C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\EntityFramework.SqlServer.dll
+C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\EntityFramework.SqlServer.xml
+C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\System.IdentityModel.Tokens.Jwt.xml

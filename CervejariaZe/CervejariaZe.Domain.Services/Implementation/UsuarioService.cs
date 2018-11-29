@@ -20,7 +20,7 @@ namespace CervejariaZe.Domain.Services.Implementation
         {
             if (ValidarUsuario(usuario))
             {
-
+                this.usuarioRepository.Autenticar(usuario);
             }
             return null;
         }

@@ -1,24 +1,24 @@
 ﻿using CervejariaZe.Application.Contracts.Services;
 using CervejariaZe.Application.Entities.User;
 using CervejariaZe.Application.Services.Implementation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace CervejariaZe.Distribution.WebApp.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")] //Habilitar acesso de outra origem
+    [RoutePrefix("api")]
     public class AuthController : ApiController
     {
-        public IUsarioAppService usuarioService;
+        public readonly IUsarioAppService usuarioService;
         public AuthController()
         {
             this.usuarioService = new UsarioAppService();
         }
         //POST: api/Auth
-        public UsarioOutputDTO Autenticar(UsarioInputDTO usuario)
+        [AcceptVerbs("Post")]
+        [Route("auth")]
+        public UsarioOutputDTO Autenticar([FromBody] UsarioInputDTO usuario)
         {
             return this.usuarioService.Autenticar(usuario);
         }
