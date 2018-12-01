@@ -5,7 +5,8 @@ namespace CervejariaZe.Application.Contracts.Services
 {
     public interface IProdutoAppService
     {
-        void Cadastrar(ProdutoDTO produto);
+        string Cadastrar();
         IList<ProdutoDTO> Listar();
+        IList<ProdutoDTO> Filtrar(string filtro);
     }
 }

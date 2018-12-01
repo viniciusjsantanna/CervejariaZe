@@ -7,7 +7,8 @@ namespace CervejariaZe.Application.Entities.User
 {
     public class UsarioOutputDTO
     {
-        public string usuario { get; set; }
+        public string Usuario { get; set; }
         public string Nome { get; set; }
+        public string Token { get; set; }
     }
 }

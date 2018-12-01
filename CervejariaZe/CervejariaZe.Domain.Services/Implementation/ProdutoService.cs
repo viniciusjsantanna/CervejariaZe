@@ -13,14 +13,19 @@ namespace CervejariaZe.Domain.Services.Implementation
         {
             this.produtoRepository = new ProdutoRepository();
         }
-        public void Cadastrar(Produto produto)
+        public string Cadastrar(Produto produto)
         {
-            this.produtoRepository.Cadastrar(produto);
+            return this.produtoRepository.Cadastrar(produto);
+        }
+
+        public IList<Produto> Filtrar(string filtro)
+        {
+            return this.produtoRepository.Filtrar(filtro);
         }
 
         public IList<Produto> Listar()
         {
-            throw new System.NotImplementedException();
+            return this.produtoRepository.Listar();
         }
     }
 }

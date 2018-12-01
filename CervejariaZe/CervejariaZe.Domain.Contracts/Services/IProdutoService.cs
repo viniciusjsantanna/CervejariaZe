@@ -5,7 +5,8 @@ namespace CervejariaZe.Domain.Contracts.Services
 {
     public interface IProdutoService
     {
-        void Cadastrar(Produto produto);
+        string Cadastrar(Produto produto);
         IList<Produto> Listar();
+        IList<Produto> Filtrar(string filtro);
     }
 }

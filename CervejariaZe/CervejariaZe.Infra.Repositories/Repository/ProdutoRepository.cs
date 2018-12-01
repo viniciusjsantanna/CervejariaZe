@@ -16,15 +16,30 @@ namespace CervejariaZe.Infra.Repositories.Repository
             this.context = new CervejariaContext();
         }
 
-        public void Cadastrar(Produto produto)
+        public string Cadastrar(Produto produto)
         {
-            this.context.Produto.Add(produto);
-            this.context.SaveChanges();
+            if (!exist(produto))
+            {
+                this.context.Produto.Add(produto);
+                this.context.SaveChanges();
+                return Mensagens.MensagemCadastroSucesso;
+            }
+            return Mensagens.RegistroExistente;
+        }
+
+        private bool exist(Produto produto)
+        {
+            return this.context.Produto.Any(e => e.Codigo.Equals(produto.Codigo));
         }
 
         public IList<Produto> Listar()
         {
             return this.context.Produto.ToList();
+        }
+
+        public IList<Produto> Filtrar(string filtro)
+        {
+            return this.context.Produto.Where(e => e.Nome.Equals(filtro) || e.Marca.Equals(filtro)).ToList();
         }
     }
 }

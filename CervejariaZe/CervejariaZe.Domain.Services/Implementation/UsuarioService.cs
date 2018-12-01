@@ -20,14 +20,14 @@ namespace CervejariaZe.Domain.Services.Implementation
         {
             if (ValidarUsuario(usuario))
             {
-                this.usuarioRepository.Autenticar(usuario);
+                return this.usuarioRepository.Autenticar(usuario);
             }
             return null;
         }
 
         private bool ValidarUsuario(Usuario usuario)
         {
-            if (usuario.Login != "" && usuario.Senha != "")
+            if (!String.IsNullOrWhiteSpace(usuario.Login) && !String.IsNullOrWhiteSpace(usuario.Senha))
             {
                 return true;
             }

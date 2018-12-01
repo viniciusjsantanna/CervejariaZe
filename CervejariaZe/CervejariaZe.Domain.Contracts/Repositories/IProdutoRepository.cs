@@ -5,7 +5,8 @@ namespace CervejariaZe.Domain.Contracts.Repositories
 {
     public interface IProdutoRepository
     {
-        void Cadastrar(Produto produto);
+        string Cadastrar(Produto produto);
         IList<Produto> Listar();
+        IList<Produto> Filtrar(string filtro);
     }
 }

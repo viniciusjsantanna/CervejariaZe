@@ -1,11 +1,8 @@
 ﻿using CervejariaZe.Application.Contracts.Services;
 using CervejariaZe.Application.Entities.Produto;
 using CervejariaZe.Application.Services.Implementation;
-using System;
+using CervejariaZe.Application.Services.Implementation.Jwt;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
@@ -13,6 +10,7 @@ namespace CervejariaZe.Distribution.WebApp.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")] //Habilitar acesso de outra origem
     [RoutePrefix("api")]
+    [JwtAuthentication]
     public class ProdutoController : ApiController
     {
         public readonly IProdutoAppService produtoService;
@@ -30,25 +28,20 @@ namespace CervejariaZe.Distribution.WebApp.Controllers
         }
 
         // GET: api/Produto/5
-        public string Get(int id)
+        [AcceptVerbs("Get")]
+        [Route("produto/filtro")]
+        public IList<ProdutoDTO> Filtrar(string filtro)
         {
-            return "value";
+            return this.produtoService.Filtrar(filtro);
         }
 
         // POST: api/Produto
         [AcceptVerbs("Post")]
         [Route("produto")]
-        public void Cadastrar([FromBody] ProdutoDTO produto)
+        public string Cadastrar()
         {
-            if(GerarArquivo() != "")
-            {
-                this.produtoService.Cadastrar(produto);
-            }
-        }   
-        
-        public string GerarArquivo()
-        {
-            return "Caminho";
+            return this.produtoService.Cadastrar();
         }
+
     }
 }

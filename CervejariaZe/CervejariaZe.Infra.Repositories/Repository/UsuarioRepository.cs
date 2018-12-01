@@ -18,7 +18,7 @@ namespace CervejariaZe.Infra.Repositories.Repository
 
         public Usuario Autenticar(Usuario usuario)
         {
-            var user = context.Usuario.Where(e => e.Login.Equals("test") && e.Senha.Equals("test")).FirstOrDefault();
+            var user = context.Usuario.Where(e => e.Login.Equals(usuario.Login) && e.Senha.Equals(usuario.Senha)).FirstOrDefault();
             return user;
         }
     }
