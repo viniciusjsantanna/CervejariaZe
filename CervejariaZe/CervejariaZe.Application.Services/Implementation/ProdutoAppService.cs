@@ -22,23 +22,20 @@ namespace CervejariaZe.Application.Services.Implementation
 
         public string Cadastrar()
         {
-            var path = GerarArquivo();
-            if (!string.IsNullOrEmpty(path))
+            var produto = GerarArquivo();
+            if (produto != null)
             {
-                //return this.produtoService.Cadastrar(new Produto
-                //{
-                //    Marca = produto.Marca,
-                //    Nome = produto.Nome,
-                //    CaminhoImagem = produto.CaminhoImagem,
-                //    Codigo = produto.Codigo,
-                //    Tipo = produto.Tipo
-                //});
+                return this.produtoService.Cadastrar(produto);
             }
             return null;
         }
 
         public IList<ProdutoDTO> Filtrar(string filtro)
         {
+            if(filtro == null)
+            {
+                return this.Listar();
+            }
             var listaProdutoDTO = new List<ProdutoDTO>();
             var produto = this.produtoService.Filtrar(filtro);
             produto.ToList().ForEach(e =>
@@ -78,14 +75,15 @@ namespace CervejariaZe.Application.Services.Implementation
         }
 
         // Metodo pra gerar arquivo no diretorio especificado e retorna o caminho para ser salvo na tabela produto
-        private string GerarArquivo()
+        private Produto GerarArquivo()
         {
-            string path, newPath = null;
+            string path = string.Empty;
+            Produto produto = new Produto();
 
             if (HttpContext.Current.Request.Form.Count > 0)
             {
-                //var formContent = HttpContext.Current.Request.Form["data"];
-                //var model = JsonConvert.DeserializeObject<ProdutoFileImagem>(formContent);
+                var formContent = HttpContext.Current.Request.Form["produto"];
+                produto = JsonConvert.DeserializeObject<Produto>(formContent);
 
                 foreach (string file in HttpContext.Current.Request.Files)
                 {
@@ -97,18 +95,19 @@ namespace CervejariaZe.Application.Services.Implementation
 
                         string nomeArquivo = fileContent.FileName;
 
-                        path = Path.Combine("C:\temp", nomeArquivo);
-                        newPath = path.Substring(path.IndexOf("\\Files"));
+                        path = Path.Combine("C:\\Users\\Vinicius Santana\\Desktop\\Cervejaria\\CervejariaZe-Angular\\CervejariaZe-Angular\\src\\assets\\img\\", nomeArquivo);
 
                         using (var fileStream = System.IO.File.Create(path))
                         {
                             stream.CopyTo(fileStream);
+                            var otherPath = path.Substring(path.IndexOf("assets"));
+                            produto.CaminhoImagem = otherPath;
                         }
                     }
                 }
             }
 
-            return newPath;
+            return produto;
         }
     }
 }

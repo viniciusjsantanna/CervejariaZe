@@ -6,8 +6,9 @@ using System.Web.Http.Cors;
 
 namespace CervejariaZe.Distribution.WebApp.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")] //Habilitar acesso de outra origem
+    //[EnableCors(origins: "*", headers: "*", methods: "*")] //Habilitar acesso de outra origem
     [RoutePrefix("api")]
+    //[DisableCors]
     public class AuthController : ApiController
     {
         public readonly IUsarioAppService usuarioService;

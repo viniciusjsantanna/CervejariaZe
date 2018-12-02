@@ -23,7 +23,7 @@ namespace CervejariaZe.Application.Services.Implementation.Jwt
 
             if (string.IsNullOrEmpty(authorization.Parameter))
             {
-                context.ErrorResult = new AuthenticationFailureResult("Missing Jwt Token", request);
+                context.ErrorResult = new AuthenticationFailureResult("Token não encontrado!", request);
                 return;
             }
 
@@ -31,7 +31,7 @@ namespace CervejariaZe.Application.Services.Implementation.Jwt
             var principal = await AuthenticateJwtToken(token);
 
             if (principal == null)
-                context.ErrorResult = new AuthenticationFailureResult("Invalid token", request);
+                context.ErrorResult = new AuthenticationFailureResult("Token invalido!", request);
 
             else
                 context.Principal = principal;

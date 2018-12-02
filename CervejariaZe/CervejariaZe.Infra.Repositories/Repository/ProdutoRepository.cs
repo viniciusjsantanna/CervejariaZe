@@ -39,7 +39,7 @@ namespace CervejariaZe.Infra.Repositories.Repository
 
         public IList<Produto> Filtrar(string filtro)
         {
-            return this.context.Produto.Where(e => e.Nome.Equals(filtro) || e.Marca.Equals(filtro)).ToList();
+            return this.context.Produto.Where(e => e.Nome.Contains(filtro) || e.Marca.Contains(filtro)).ToList();
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace CervejariaZe.Distribution.WebApp
 {
@@ -13,6 +14,12 @@ namespace CervejariaZe.Distribution.WebApp
 
             // Rotas da API da Web
             config.MapHttpAttributeRoutes();
+
+            //string origin = "http://localhost:50164/IDGWebClient/";
+
+            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "GET,POST");
+
+            config.EnableCors(cors);
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

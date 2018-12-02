@@ -8,9 +8,10 @@ using System.Web.Http.Cors;
 
 namespace CervejariaZe.Distribution.WebApp.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")] //Habilitar acesso de outra origem
+    //[EnableCors(origins: "*", headers: "*", methods: "*")] //Habilitar acesso de outra origem
     [RoutePrefix("api")]
     [JwtAuthentication]
+    //[DisableCors]
     public class ProdutoController : ApiController
     {
         public readonly IProdutoAppService produtoService;
@@ -22,9 +23,9 @@ namespace CervejariaZe.Distribution.WebApp.Controllers
         // GET: api/Produto
         [AcceptVerbs("Get")]
         [Route("produto")]
-        public IList<ProdutoDTO> Listar()
+        public IHttpActionResult Listar()
         {
-            return this.produtoService.Listar();
+            return Ok(this.produtoService.Listar());
         }
 
         // GET: api/Produto/5

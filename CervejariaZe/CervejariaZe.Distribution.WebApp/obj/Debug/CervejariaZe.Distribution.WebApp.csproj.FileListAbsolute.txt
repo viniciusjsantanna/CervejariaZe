@@ -155,3 +155,5 @@ C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distrib
 C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\Thinktecture.IdentityModel.Core.pdb
 C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\Vse.Web.Serialization.pdb
 C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\Microsoft.IdentityModel.Logging.pdb
+C:\Users\Vinicius Santana\Desktop\CervejariaZe\CervejariaZe\CervejariaZe.Distribution.WebApp\bin\Microsoft.IdentityModel.Tokens.pdb

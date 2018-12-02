@@ -26,12 +26,12 @@ namespace CervejariaZe.Application.Services.Implementation
 
             if (usuario != null)
             {
-                //var token = JwtManager.GenerateToken(usuario.Login);
+                var token = JwtManager.GenerateToken(usuario.Login);
                 return new UsarioOutputDTO()
                 {
                     Usuario = usuario.Login,
                     Nome = usuario.Nome,
-                    //Token = token
+                    Token = token
                 };
             }
             return null;
